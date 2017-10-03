@@ -61,4 +61,38 @@ public class CList <T>{
     public void deleteList(){
         pivot = pointer = null;
     }
+	
+    public void showList(){
+	if(!isEmpty()){
+		pointer=pivot;
+		System.out.println("first->");
+		for(int i= 1; i<=length;i++){   
+			System.out.println("["+pointer.data.toString() + "]->"); 
+			pointer=pointer.next; 
+		}
+    	System.out.println("<-last");
+        }
+        else{
+            System.out.println("Empty List"); //Si está vacía no se muestran datos
+        }
+        pointer=null;
+    }
+	
+	public void showList(){
+		if(!isEmpty()){
+			pointer=pivot;
+			System.out.println("first->");
+			for(int i= 1; i<=length;i++){   
+				System.out.println("["+pointer.toString() + "]->"); 
+				pointer=pointer.next; 
+			}
+		System.out.println("<-last");
+		}
+		else{
+		    System.out.println("Empty List"); //Si está vacía no se muestran datos
+		}
+		pointer=null;
+	    }
+
+
 }
